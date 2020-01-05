@@ -86,8 +86,8 @@ namespace Moneybox.App.Tests.Features
 
                 sut.Execute(fromAccountId, 250m);
 
-                Assert.AreEqual(fromAccount.Balance, 4750m);
-                Assert.AreEqual(fromAccount.Withdrawn, -250m);
+                Assert.AreEqual(4750m, fromAccount.Balance);
+                Assert.AreEqual(-250m, fromAccount.Withdrawn);
             }
 
             [Test]

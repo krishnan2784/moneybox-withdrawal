@@ -93,7 +93,7 @@ namespace Moneybox.App.Tests.Domain
                 sut.Debit(250m);
 
                 var expected = 750m;
-                Assert.AreEqual(sut.Balance, expected);
+                Assert.AreEqual(expected, sut.Balance);
             }
 
             [Test]
@@ -104,7 +104,7 @@ namespace Moneybox.App.Tests.Domain
                 sut.Debit(250m);
 
                 var expected = -250m;
-                Assert.AreEqual(sut.Withdrawn, expected);
+                Assert.AreEqual(expected, sut.Withdrawn);
             }
         }
 
@@ -118,7 +118,7 @@ namespace Moneybox.App.Tests.Domain
                 sut.Credit(250m);
 
                 var expected = 1250m;
-                Assert.AreEqual(sut.Balance, expected);
+                Assert.AreEqual(expected, sut.Balance);
             }
 
             [Test]
@@ -129,7 +129,7 @@ namespace Moneybox.App.Tests.Domain
                 sut.Credit(250m);
 
                 var expected = 1250m;
-                Assert.AreEqual(sut.PaidIn, expected);
+                Assert.AreEqual(expected, sut.PaidIn);
             }
         }
     }
